@@ -5,7 +5,7 @@
 - Noten
 - Kantinenessen
 - ToDo
-
+-Allahu akbar
 # Tools
 - Flutter
 - Dart
