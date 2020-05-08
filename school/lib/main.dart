@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
                           child: Container(
                             margin: EdgeInsets.only(top: 100),
                             child: Center(
-                              child: Text("Welcome to ScHooL4.0", style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold, fontStyle: FontStyle.normal),),
+                              child: Text("Welcome to ScHooL4.0", style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),),
                             )
                           )
                         ),
@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
                             child: Container(
                                 margin: EdgeInsets.only(top: 200),
                                 child: Center(
-                                  child: Text("Your new way of learning", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500, fontStyle: FontStyle.normal),),
+                                  child: Text("Your new way of learning", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500, fontStyle: FontStyle.italic),),
                                 )
                             )
                         )
