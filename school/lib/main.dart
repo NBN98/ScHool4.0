@@ -127,7 +127,7 @@ class HomePage extends StatelessWidget {
                           )
                         ),
                         SizedBox(height: 70,),
-                        Text("Passwort vergessen", style: TextStyle(decoration: TextDecoration.underline, decorationStyle: TextDecorationStyle.double, color: Color.fromRGBO(143, 180, 251, 1), fontWeight: FontWeight.bold),),
+                        Text("Passwort vergessen", style: TextStyle(decoration: TextDecoration.underline,decorationStyle: TextDecorationStyle.double, color: Color.fromRGBO(143, 180, 251, 1), fontWeight: FontWeight.bold),),
                       ],
                     )
                   )

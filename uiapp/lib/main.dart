@@ -7,6 +7,8 @@ import './Persönliches.dart';
 import './ToDo.dart';
 import './Elterngespräch.dart';
 import './Speisekarte.dart';
+import 'Elterngespräch.dart';
+import 'Persönliches.dart';
 
 
 
