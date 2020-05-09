@@ -24,7 +24,7 @@ class ToDO extends StatelessWidget {
                       margin: const EdgeInsets.all(8.0),
                       color: Colors.white,
                       child: ListTile(
-                        title: Text("Max Mustermann, \n Klasse 11a, \n Asam-Gymnasium München", style: TextStyle(color: Colors.black, fontWeight:  FontWeight.w500),),
+                        title: Text("Hier hausaufgaben", style: TextStyle(color: Colors.black, fontWeight:  FontWeight.w500),),
                       )
                   ),
                   const SizedBox(height: 10.0,),
