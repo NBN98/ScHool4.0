@@ -3,10 +3,12 @@ import 'package:uiapp/Speisekarte.dart';
 import 'package:uiapp/Stundenplan.dart';
 import './Startseite.dart';
 import './Stundenplan.dart';
-import './Persönliches.dart';
+import './Persoenliches.dart';
 import './ToDo.dart';
-import './Elterngespräch.dart';
+import './Elterngespraech.dart';
 import './Speisekarte.dart';
+import 'Elterngespraech.dart';
+import 'Persoenliches.dart';
 
 
 
@@ -35,12 +37,21 @@ class MyAppState extends State<MyApp>{
     return MaterialApp(
       title: 'Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.lightBlue,
       ),
       home: Scaffold(
-        appBar: AppBar(centerTitle: true, title: Text('ScHooL4.0'),),
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text('ScHooL4.0',
+            style: TextStyle(
+                fontFamily: 'Raleway',
+                fontWeight: FontWeight.w600,
+                letterSpacing: 0.9,
+                color: Colors.white,
+                )),),
         body: _pageOptions[_selectedPage],
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.grey[300],
           type: BottomNavigationBarType.fixed,
           currentIndex: _selectedPage,
           onTap: (int index) {
