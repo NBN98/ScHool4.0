@@ -1,10 +1,5 @@
-# Implemented - Stand 11.05.2020
-- ToDO + Fonts (Diddy)
-- Elterngespräch + Persönliches + Speisekarte (Noah)
+# uiapp
 
-# Not Implemented
-- Startseite
-- Stundenplan
-- Login mit App verbinden
+A new Flutter application.
 
 
