@@ -8,18 +8,25 @@ class ToDO extends StatefulWidget {
 
 class _ToDOState extends State<ToDO> {
   List<String> tasks = [
-    'Mathe S.2','Englisch AB3','HSU S.20','Englisch AB4','Geschichte S.20','Goethe Faust'
+    'Mathe S.2',
+    'Englisch AB3',
+    'HSU S.20',
+    'Englisch AB4',
+    'Geschichte S.20',
+    'Goethe Faust'
   ];
-  void addItem(String item){
+
+  void addItem(String item) {
     setState(() {
       tasks.add(item);
     });
+    Navigator.of(context).pop();
   }
 
-  void newEntry(){
+  void newEntry() {
     showDialog<AlertDialog>(
         context: context,
-        builder: (BuildContext context){
+        builder: (BuildContext context) {
           return AlertDialog(
             content: TextField(
               onSubmitted: addItem,
@@ -27,43 +34,49 @@ class _ToDOState extends State<ToDO> {
           );
         });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
+      appBar: AppBar(
         backgroundColor: Colors.grey[300],
-        appBar: AppBar(
-          backgroundColor: Colors.grey[300],
-          title: Text('Aufgaben',
-            style: TextStyle(
-                color: Colors.black,
-                fontFamily: 'Raleway',
-                fontWeight: FontWeight.w600),),
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            color: Colors.black,
-            onPressed: (){
-              Navigator.push(context,
-                MaterialPageRoute(builder: (context) => MyApp()),
-              );
-            },
-          ),
+        title: Text(
+          'Aufgaben',
+          style: TextStyle(
+              color: Colors.black,
+              fontFamily: 'Raleway',
+              fontWeight: FontWeight.w600),
         ),
-        body: ListView.builder(
-          scrollDirection: Axis.vertical,
-          itemCount: tasks.length,
-          itemBuilder: (context, i){
-            return SingleToDo(tasks[i]);
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          color: Colors.black,
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MyApp()),
+            );
           },
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: newEntry,
-          child: Icon(Icons.add, color: Colors.white,),
-          backgroundColor: Colors.lightBlue,
-    ),
+      ),
+      body: ListView.builder(
+        scrollDirection: Axis.vertical,
+        itemCount: tasks.length,
+        itemBuilder: (context, i) {
+          return SingleToDo(tasks[i]);
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: newEntry,
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
+        backgroundColor: Colors.lightBlue,
+      ),
     );
   }
 }
-
 
 /*class ToDO extends StatelessWidget {
   final List<String> tasks = [
@@ -123,20 +136,21 @@ class _ToDOState extends State<ToDO> {
                  */
 class SingleToDo extends StatelessWidget {
   final String title;
+
   const SingleToDo(this.title);
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: 18),
-      child:
-      ListTile(
+      padding: EdgeInsets.symmetric(horizontal: 18),
+      child: ListTile(
         contentPadding: EdgeInsets.symmetric(vertical: 2.0),
-        leading: Checkbox(value: false,),
-        title: Text(title,
-          style: TextStyle(
-              fontSize: 20,
-              fontFamily: 'Raleway'),
+        leading: Checkbox(
+          value: false,
+        ),
+        title: Text(
+          title,
+          style: TextStyle(fontSize: 20, fontFamily: 'Raleway'),
         ),
         trailing: Icon(Icons.delete_outline),
       ),

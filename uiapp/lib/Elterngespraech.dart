@@ -11,7 +11,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 class Meeting extends StatelessWidget {
   bool iSearchung = false;
   List<String> tasks = [
-    'Markus Müller','Don Quixotte Doflamingo','Thomas Mann','Stefan Matthaus','Andreas Wanke','Vito Scaletta','Don Corleone','Max Meyer','David Schneider','Paul Fischer','Joe Budden'
+    'Hashim Thaqi','Don Quixotte Doflamingo','Isa Mustafa','Blenda Muti','Andreas Wanke','Vito Scaletta','Don Corleone','Max Meyer','David Schneider','Paul Fischer','Joe Budden'
   ];
 
   @override
