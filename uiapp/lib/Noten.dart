@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uiapp/Pers%C3%B6nliches.dart';
+import 'package:uiapp/Persoenliches.dart';
 //import './P';
 
 class Noten extends StatelessWidget {
@@ -8,7 +8,10 @@ class Noten extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: Text('Notenübersicht (Ø 2,3)', style: TextStyle(color: Colors.black),),
+          title: Text('Notenübersicht (Ø 2,3)',
+            style: TextStyle(
+                color: Colors.black,
+                fontFamily: 'Raleway'),),
           leading: IconButton(icon: Icon(Icons.arrow_back), color: Colors.black, onPressed: (){
             Navigator.push(context,
             MaterialPageRoute(builder: (context) => Personal()),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './Elterngespräch.dart';
+import './Elterngespraech.dart';
 
 class Appointment extends StatelessWidget {
   @override
@@ -7,7 +7,11 @@ class Appointment extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: Text('Termin buchen', style: TextStyle(color: Colors.black),),
+          title: Text('Termin buchen',
+            style: TextStyle(
+                color: Colors.black,
+                fontFamily: 'Raleway',
+                fontWeight: FontWeight.w600),),
           leading: IconButton(icon: Icon(Icons.arrow_back), color: Colors.black, onPressed: (){
             Navigator.push(context,
               MaterialPageRoute(builder: (context) => Meeting()),
@@ -28,7 +32,7 @@ class Appointment extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Container(
-                      padding: EdgeInsets.all(60),   //8
+                      padding: EdgeInsets.all(50),   //8
                       decoration: BoxDecoration(
                         border: Border(bottom: BorderSide(color: Colors.grey[100]))
                       ),
@@ -38,13 +42,19 @@ class Appointment extends StatelessWidget {
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "Tippe hier deine Nachricht ein",
-                          hintStyle: TextStyle(color: Colors.grey[400])
+                          hintStyle: TextStyle(
+                              color: Colors.grey[400],
+                              fontFamily: 'Raleway',
+                              fontWeight: FontWeight.w400)
                         ),
                       )
                     ),
                     RaisedButton(
                       onPressed: () {},
-                      child: Text('Nachricht versenden'),
+                      child: Text('Nachricht versenden',
+                          style: TextStyle(
+                              fontFamily: 'Raleway',
+                              fontWeight: FontWeight.w600)),
                       color: Colors.grey[200]
                     ),
                   ],

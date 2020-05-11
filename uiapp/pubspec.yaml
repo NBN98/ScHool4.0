@@ -71,3 +71,12 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: fonts/Raleway-Bold.ttf
+          weight: 700
+        - asset: fonts/Raleway-Regular.ttf
+          weight: 400
+        - asset: fonts/Raleway-Italic.ttf
+          style: italic

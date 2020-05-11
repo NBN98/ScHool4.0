@@ -14,7 +14,10 @@ class Meeting extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: Text('Elterngespräch', style: TextStyle(color: Colors.black),),    //TextField(decoration: InputDecoration(hintText: "Suche nach Lehrer/in"),)
+          title: Text('Elterngespräch', style: TextStyle(
+              color: Colors.black,
+              fontFamily: 'Raleway',
+              fontWeight: FontWeight.w700),),    //TextField(decoration: InputDecoration(hintText: "Suche nach Lehrer/in"),)
           leading: IconButton(icon: Icon(Icons.arrow_back), color: Colors.black, onPressed: (){
             Navigator.push(context,
               MaterialPageRoute(builder: (context) => MyApp()),
@@ -32,7 +35,11 @@ class Meeting extends StatelessWidget {
                       margin: const EdgeInsets.all(8.0),
                       color: Colors.white,
                       child: ListTile(
-                        title: Text("Mit welchen Lehrern möchten Sie ein Gespräch/Elterngespräch ausmachen?", style: TextStyle(color: Colors.black, fontWeight:  FontWeight.w500),),
+                        title: Text("Mit welchen Lehrern möchten Sie einen Termin zum (Eltern-)Gespräch ausmachen?",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: 'Raleway'),),
                       )
                   ),
                   const SizedBox(height: 10.0,),
