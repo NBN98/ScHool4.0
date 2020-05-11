@@ -5,14 +5,18 @@ class Appointment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.grey[300],
           title: Text('Termin buchen',
             style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'Raleway',
                 fontWeight: FontWeight.w600),),
-          leading: IconButton(icon: Icon(Icons.arrow_back), color: Colors.black, onPressed: (){
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            color: Colors.black,
+            onPressed: (){
             Navigator.push(context,
               MaterialPageRoute(builder: (context) => Meeting()),
             );
@@ -26,7 +30,7 @@ class Appointment extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
-                  color: Colors.grey,
+                  color: Colors.grey[100],
                   borderRadius: BorderRadius.circular(10)
                 ),
                 child: Column(
@@ -34,7 +38,7 @@ class Appointment extends StatelessWidget {
                     Container(
                       padding: EdgeInsets.all(50),   //8
                       decoration: BoxDecoration(
-                        border: Border(bottom: BorderSide(color: Colors.grey[100]))
+                        border: Border(bottom: BorderSide(color: Colors.lightBlue))
                       ),
                       child: TextField(
                         keyboardType: TextInputType.multiline,
@@ -45,7 +49,7 @@ class Appointment extends StatelessWidget {
                           hintStyle: TextStyle(
                               color: Colors.grey[400],
                               fontFamily: 'Raleway',
-                              fontWeight: FontWeight.w400)
+                              fontWeight: FontWeight.w600,)
                         ),
                       )
                     ),
@@ -54,8 +58,10 @@ class Appointment extends StatelessWidget {
                       child: Text('Nachricht versenden',
                           style: TextStyle(
                               fontFamily: 'Raleway',
-                              fontWeight: FontWeight.w600)),
-                      color: Colors.grey[200]
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white)
+                          ),
+                              color: Colors.lightBlue
                     ),
                   ],
                 ),

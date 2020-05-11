@@ -51,6 +51,7 @@ class MyAppState extends State<MyApp>{
                 )),),
         body: _pageOptions[_selectedPage],
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.grey[300],
           type: BottomNavigationBarType.fixed,
           currentIndex: _selectedPage,
           onTap: (int index) {

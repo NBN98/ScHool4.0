@@ -5,8 +5,9 @@ class Food extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.grey[300],
           title: Text('Speisekarte', style: TextStyle(color: Colors.black),),
           leading: IconButton(icon: Icon(Icons.arrow_back), color: Colors.black, onPressed: (){
             Navigator.push(context,
@@ -22,7 +23,7 @@ class Food extends StatelessWidget {
                   Card(
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                       margin: const EdgeInsets.all(8.0),
-                      color: Colors.white,
+                      color: Colors.grey[300],
                       child: ListTile(
                         title: Text("Hier Speisekarte", style: TextStyle(color: Colors.black, fontWeight:  FontWeight.w500),),
                       )

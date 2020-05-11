@@ -6,8 +6,9 @@ class Personal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.grey[300],
           title: Text(
             'Persönliches',
             style: TextStyle(
@@ -34,7 +35,7 @@ class Personal extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0)),
                   margin: const EdgeInsets.all(15.0),
-                  color: Colors.white,
+                  color: Colors.grey[300],
                   child: ListTile(
                     title: Text(
                       "Max Mustermann\nKlasse 11a\nAsam-Gymnasium München",
@@ -51,6 +52,7 @@ class Personal extends StatelessWidget {
                 height: 10.0,
               ),
               Card(
+                  color: Colors.grey[300],
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0)),
                   child: Column(
