@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import './Page_0.dart';
+
 
 void main() => runApp(
     MaterialApp(
@@ -23,7 +25,6 @@ class HomePage extends StatelessWidget {
                       image: DecorationImage(
                         image: AssetImage('image/background.png'),
                           fit: BoxFit.fill
-
                           ) // DecorationImage
                       ),
                     child: Stack(
@@ -45,7 +46,14 @@ class HomePage extends StatelessWidget {
                           child: Container(
                             margin: EdgeInsets.only(top: 100),
                             child: Center(
-                              child: Text("Welcome to ScHooL4.0", style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),),
+                              child: Text("Welcome to ScHooL4.0",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 30,
+                                    fontFamily: 'Raleway',
+                                    fontWeight: FontWeight.w600,
+                                    letterSpacing: 1.3
+                                    )),
                             )
                           )
                         ),
@@ -54,7 +62,13 @@ class HomePage extends StatelessWidget {
                             child: Container(
                                 margin: EdgeInsets.only(top: 200),
                                 child: Center(
-                                  child: Text("Your new way of learning", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500, fontStyle: FontStyle.italic),),
+                                  child: Text("Your new way of learning",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontFamily: 'Raleway',
+                                        fontWeight: FontWeight.w800,
+                                        fontStyle: FontStyle.italic),),
                                 )
                             )
                         )
@@ -83,26 +97,35 @@ class HomePage extends StatelessWidget {
                               Container(
                                 padding: EdgeInsets.all(8.0),
                                 decoration: BoxDecoration(
-                                  border: Border(bottom: BorderSide(color: Colors.grey[200]))
+                                  border: Border(bottom: BorderSide(
+                                      color: Colors.grey[200]))
                                 ),
                                 child: TextField(
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
                                     hintText: "E-Mail der Schule",
-                                    hintStyle: TextStyle(color: Colors.grey[400])
+                                    hintStyle: TextStyle(
+                                        color: Colors.grey[400],
+                                        fontFamily: 'Raleway',
+                                        fontWeight: FontWeight.w500)
                                   ),
                                 )
                               ),
                               Container(
                                   padding: EdgeInsets.all(8.0),
                                   decoration: BoxDecoration(
-                                      border: Border(bottom: BorderSide(color: Colors.grey[200]))
+                                      border: Border(
+                                          bottom: BorderSide(
+                                              color: Colors.grey[200]))
                                   ),
                                   child: TextField(
                                     decoration: InputDecoration(
                                         border: InputBorder.none,
                                         hintText: "Passwort",
-                                        hintStyle: TextStyle(color: Colors.grey[400])
+                                        hintStyle: TextStyle(
+                                            color: Colors.grey[400],
+                                            fontFamily: 'Raleway',
+                                            fontWeight: FontWeight.w500)
                                     ),
                                   )
                               )
@@ -111,8 +134,9 @@ class HomePage extends StatelessWidget {
                         ),
                         SizedBox(height: 30,),
                         Container(
-                          height: 50,
-                          margin: EdgeInsets.symmetric(horizontal: 50),
+
+                          height: 60,
+                          margin: EdgeInsets.symmetric(horizontal: 40),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
                             gradient: LinearGradient(
@@ -122,12 +146,32 @@ class HomePage extends StatelessWidget {
                               ]
                             )
                           ),
-                          child: Center(
-                            child: Text("Einloggen", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+
+                          child: MaterialButton(
+                            onPressed: (){
+                              Navigator.of(context).push(
+                                  MaterialPageRoute(builder: (context) => MyApp()),
+                              );
+                            },
+                            child: Center(
+
+                            //child: Text("Einloggen",
+                              child: Text('Login', style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: 'Raleway',
+                                  fontSize: 19,
+                                  fontWeight: FontWeight.w700) ),
+                              ),
                           )
                         ),
                         SizedBox(height: 70,),
-                        Text("Passwort vergessen", style: TextStyle(decoration: TextDecoration.underline, decorationStyle: TextDecorationStyle.double, color: Color.fromRGBO(143, 180, 251, 1), fontWeight: FontWeight.bold),),
+                        Text("Passwort vergessen",
+                          style: TextStyle(
+                            fontSize: 17,
+                            decoration: TextDecoration.underline,
+                            color: Color.fromRGBO(143, 180, 251, 1),
+                            fontFamily: 'Raleway',
+                            fontWeight: FontWeight.w800),),
                       ],
                     )
                   )
