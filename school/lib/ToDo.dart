@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import './main.dart';
 import './Page_0.dart';
 // By Diddy
 class ToDO extends StatefulWidget {
@@ -15,8 +14,11 @@ class _ToDOState extends State<ToDO> {
   void addItem(String item) {
     setState(() {
       tasks[item] = false;
+
     });
-    Navigator.of(context).pop();
+    //Navigator.of(context).pop();
+    //Navigator.pushReplacement(context, addIte);
+    Navigator.of(context).maybePop();
   }
 
   void deleteItem(String key) {
@@ -38,6 +40,7 @@ class _ToDOState extends State<ToDO> {
           return AlertDialog(
             content: TextField(
               onSubmitted: addItem,
+
             ),
           );
         });
@@ -54,7 +57,7 @@ class _ToDOState extends State<ToDO> {
           style: TextStyle(
               color: Colors.black,
               fontFamily: 'Raleway',
-              fontWeight: FontWeight.w600),
+              fontWeight: FontWeight.w700),
         ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),

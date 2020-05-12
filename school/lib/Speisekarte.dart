@@ -16,7 +16,7 @@ class Food extends StatelessWidget {
 
               appBar: AppBar(
                 backgroundColor: Colors.grey[300],
-                title: Text('Speisekarte', style: TextStyle(color: Colors.black, fontFamily: 'Raleway', fontWeight: FontWeight.w600,),),
+                title: Text('Speisekarte', style: TextStyle(color: Colors.black, fontFamily: 'Raleway', fontWeight: FontWeight.w700,),),
                 leading: IconButton(icon: Icon(Icons.arrow_back), color: Colors.black, onPressed: (){
                   Navigator.push(context,
                     MaterialPageRoute(builder: (context) => MyApp()),

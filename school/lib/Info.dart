@@ -1,25 +1,21 @@
 import 'package:flutter/material.dart';
-import './main.dart';
-import './Page_0.dart';
+import './Persoenliches.dart';
 
-class Timetable extends StatelessWidget {
+class Info extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+        backgroundColor: Colors.grey[300],
         appBar: AppBar(
           backgroundColor: Colors.grey[300],
-          title: Text('Studenplan und Termine',
+          title: Text('Infos',
             style: TextStyle(
                 color: Colors.black,
-                fontFamily: 'Raleway',
-                fontWeight: FontWeight.w700),),
+                fontFamily: 'Raleway'),),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            color: Colors.black,
-            onPressed: (){
+            icon: Icon(Icons.arrow_back), color: Colors.black, onPressed: () {
             Navigator.push(context,
-              MaterialPageRoute(builder: (context) => MyApp()),
+              MaterialPageRoute(builder: (context) => Personal()),
             );
           },
           ),
@@ -34,20 +30,19 @@ class Timetable extends StatelessWidget {
                       margin: const EdgeInsets.all(8.0),
                       color: Colors.grey[300],
                       child: ListTile(
-                        title: Text("hier Studenplan",
+                        title: Text(
+                          "Gestaltung ergonometrischer Benutzeroberflächen: \n 2020 \u00a9 Noah, Ardit, Can, Eroll",
                           style: TextStyle(
                               color: Colors.black,
-                              fontWeight: FontWeight.w400,
+                              fontWeight: FontWeight.w600,
                               fontFamily: 'Raleway'),),
                       )
                   ),
                   const SizedBox(height: 10.0,),
-
                 ]
             )
         )
-      //padding:  EdgeInsets.all(25.0),
-      //child: Text('Persönliches', style: TextStyle(fontSize: 25.0),),
+
     );
   }
 }

@@ -3,6 +3,7 @@ import './Noten.dart';
 import './main.dart';
 import './Page_0.dart';
 import 'main.dart';
+import './Info.dart';
 
 class Personal extends StatelessWidget {
   @override
@@ -16,7 +17,7 @@ class Personal extends StatelessWidget {
             style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'Raleway',
-                fontWeight: FontWeight.w600),
+                fontWeight: FontWeight.w700),
           ),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
@@ -109,6 +110,25 @@ class Personal extends StatelessWidget {
                         ),
                         trailing: Icon(Icons.keyboard_arrow_right),
                         onTap: () {
+                          // Einstellungen
+                        },
+                      ),
+                      ListTile(
+                        leading: Icon(
+                          Icons.info,
+                          color: Colors.black,
+                        ),
+                        title: Text(
+                          "Informationen über die App",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontFamily: 'Raleway',
+                              fontWeight: FontWeight.w600),
+                        ),
+                        trailing: Icon(Icons.keyboard_arrow_right),
+                        onTap: () {
+                          Navigator.of(context).push(
+                              MaterialPageRoute(builder: (context) => Info()));
                           // Einstellungen
                         },
                       ),
