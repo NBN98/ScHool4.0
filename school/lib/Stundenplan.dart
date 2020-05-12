@@ -9,7 +9,7 @@ class Timetable extends StatelessWidget {
       backgroundColor: Colors.grey[300],
         appBar: AppBar(
           backgroundColor: Colors.grey[300],
-          title: Text('Studenplan und Termine',
+          title: Text('Stundenplan',
             style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'Raleway',

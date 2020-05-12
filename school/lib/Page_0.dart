@@ -26,10 +26,10 @@ class MyAppState extends State<MyApp>{
   final _pageOptions = [
     HomePage(),
     Timetable(),
-    Personal(),
     ToDO(),
     Meeting(),
-    Food()
+    Food(),
+    Personal()
   ];
 
   @override
@@ -37,7 +37,7 @@ class MyAppState extends State<MyApp>{
     return MaterialApp(
       title: 'Demo',
       theme: ThemeData(
-        primarySwatch: Colors.lightBlue,
+        primaryColor: Color.fromRGBO(127, 255, 212, 1),
       ),
       home: Scaffold(
         appBar: AppBar(
@@ -45,9 +45,9 @@ class MyAppState extends State<MyApp>{
           title: Text('ScHooL4.0',
               style: TextStyle(
                 fontFamily: 'Raleway',
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w800,
                 letterSpacing: 0.9,
-                color: Colors.white,
+                color: Colors.black,
               )),),
         body: _pageOptions[_selectedPage],
         bottomNavigationBar: BottomNavigationBar(
@@ -68,10 +68,7 @@ class MyAppState extends State<MyApp>{
                 icon: Icon(Icons.today),
                 title: Text('')
             ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                title: Text('')
-            ),
+
             BottomNavigationBarItem(
                 icon: Icon(Icons.assignment),
                 title: Text('')
@@ -83,6 +80,10 @@ class MyAppState extends State<MyApp>{
 
             BottomNavigationBarItem(
                 icon: Icon(Icons.fastfood),
+                title: Text('')
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.person),
                 title: Text('')
             ),
           ],
